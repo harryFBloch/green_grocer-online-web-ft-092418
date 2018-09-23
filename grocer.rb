@@ -21,10 +21,13 @@ def apply_coupons(cart, coupons)
   cart.each {|keys, itemInfo| 
     coupons.each { |coup_hash| 
       if coup_hash.has_key?(key)
-        
+        coups["#{key} W/COUPON"] = {:price => coup_hash[:cost],
+        :clearance => itemInfo[:clearance], :count => itemInfo[:count]
+        }
       end 
     }
   }
+  coups
 end
 
 def apply_clearance(cart)
