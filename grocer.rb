@@ -19,9 +19,10 @@ def apply_coupons(cart, coupons)
   # code here
   coups = {}
   cart.each {|keys, itemInfo| 
-    coupons.each { |item_hash| 
-      
-      
+    coupons.each { |coup_hash| 
+      if coup_hash.has_key?(key)
+        
+      end 
     }
   }
 end
