@@ -18,7 +18,7 @@ end
 def apply_coupons(cart, coupons)
   # code here
   coups = {}
-  cart.each {|keys, itemInfo| 
+  cart.each {|key, itemInfo| 
     coupons.each { |coup_hash| 
       if coup_hash.has_key?(key)
         coups["#{key} W/COUPON"] = {:price => coup_hash[:cost],
